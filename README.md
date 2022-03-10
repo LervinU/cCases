@@ -1,7 +1,7 @@
 ## **HOW TO RUN THE PROJECT**
 
-1. RUN  `npm install` command he project folder.
-2. RUN  `npm start` command he project folder.
+1. RUN  `npm install` command in the project folder.
+2. RUN  `npm start` command in the project folder.
 
 
 ## **ENDPOINTS**

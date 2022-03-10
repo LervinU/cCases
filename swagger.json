@@ -1,0 +1,72 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "version": "1.0.0",
+      "title": "Covid cases",
+      "description": "Aictive Test",
+      "license": {
+        "name": "MIT",
+        "url": "https://opensource.org/licenses/MIT"
+      }
+    },
+    "host": "localhost:3000",
+    "basePath": "/",
+
+    "schemes": ["http"],
+    "consumes": ["application/json"],
+    "produces": ["application/json"],
+
+    
+    "paths": {
+
+      "/api/cases": {
+        "get": {
+          "summary": "Obtener la cantidad de casos confirmados totales por país o por provincia.",
+          "tags": ["Cases"],
+          "parameters": [
+            {
+              "name": "country",
+              "description": "Nombre del pais",
+              "in":"query",
+              "schema": {
+                "type": "string"
+              }
+            },
+            {
+              "name": "province",
+              "description": "Nombre de la provincia",
+              "in":"query",
+              "schema": {
+                "type": "array",
+                "items": {
+                    "type":"string"
+                  }
+              }
+            }
+            ],
+          "responses": {
+            "200": {
+              "description": "OK",
+              "schema": {
+
+              }
+            }
+          }
+        }
+      },
+      "/api/cases/range": {
+        "get": {
+          "summary": "Obtener listado de países y provincias filtrando por rangos de casos activos.",
+          "tags": ["Cases"],
+          "responses": {
+            "200": {
+              "description": "OK",
+              "schema": {
+
+              }
+            }
+          }
+        }
+      }
+    }
+  }
